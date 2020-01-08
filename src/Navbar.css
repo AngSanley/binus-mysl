@@ -1,0 +1,52 @@
+.Navbar {
+    display: flex;
+    flex-direction: column;
+    background: #164396;
+    color: white !important;
+    min-width: 300px;
+}
+
+.NavButton{
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    margin: 12px;
+    user-select: disabled;
+}
+
+.NavButton:visited{
+    color:white;
+}
+
+.NavButton:hover{
+    background-color: var(--green);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+
+@media (max-width: 900px) {
+    .Navbar{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .NavText{
+        display: none;
+    }
+
+    .NavbarNavigation{
+        display:none;
+    }
+}
+
+@media (min-width: 901px) {
+    .NavIcon{
+        padding-right: 10px;
+    }
+}
+
