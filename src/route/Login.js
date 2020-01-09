@@ -34,7 +34,7 @@ class Login extends Component {
         else if (this.state.number.length !== 12) {
             alert('Please input 12 digits number only');
         }
-        else if (this.state.number.match(/^0878/) !== "0878") {
+        else if (this.state.number.match(/^0878/) != "0878") {
             alert('Please input your mySL number (0878XXXXXXXX)');
         }
         else if (this.state.password < 5 || this.state.password > 25) {
