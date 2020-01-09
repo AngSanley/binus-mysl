@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Button from '../component/Button.js';
 import TextInput from '../component/TextInput.js';
+import AudioPlayer from "../component/AudioPlayer";
+import AudioFile from '../TRG_Banks_-_Grandpas_great_escape.mp3';
 
 class Feedback extends Component {
     constructor(props) {
@@ -56,9 +58,7 @@ class Feedback extends Component {
         return (
             <div className="Route">
                 <h1>Feedback</h1>
-                <audio controls autoplay hidden="hidden">
-                    <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/none_given/TRG_Banks/TRG_Banks_-_Singles/TRG_Banks_-_Grandpas_great_escape.mp3" type=".mp3" />
-                </audio>
+                <AudioPlayer controls={true} source={AudioFile} type={'audio/mpeg'} autoPlay={true}/>
                 <form onSubmit={this.handleSubmit}>
                     <TextInput placeholder="name" name="username" type="text" value={this.state.username} onChange={this.handleNameChange}/>
                     <TextInput placeholder="someone@example.com" name="userEmail" type="email" value={this.state.userEmail} onChange={this.handleEmailChange}/>

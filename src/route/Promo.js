@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Button from '../component/Button.js';
+import VideoPlayer from "../component/VideoPlayer";
+import VideoFile from '../videoplayback.mp4';
 
 class Promo extends Component {
     render() {
         return (
             <div className="Route">
                 <h1>Promo</h1>
-                <iframe width="100%" height="400px" src="https://www.youtube.com/embed/vVsYnJq7h1E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <VideoPlayer source={VideoFile} autoPlay={true} controls={false}/>
                 <br />
                 <br />
                 <div>Jangan sampai kehabisan kuota jadi penghalang kamu untuk terus berprogres. Aktifkan Stra Kuota Zero di NEW mySL! Kuota tambahan sesuai kebutuhanmu hingga 3GB, tanpa biaya tambahan.
