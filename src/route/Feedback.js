@@ -30,9 +30,15 @@ class Feedback extends Component {
         this.setState({ feedback: event.target.value });
     }
 
+    handleReset(event){
+        this.setState({name: ''});
+        this.setState({email: ''});
+        this.setState({feedback: ''});
+    }
+
     handleSubmit(event){
         let valid = true;
-        if(this.state.feedback === ''){
+        if(this.state.feedback.length < 1){
             alert('Please input your feedback below');
             valid = false;
         }
@@ -45,11 +51,11 @@ class Feedback extends Component {
             valid = false;
         }
         if (valid){
-            console.log("nyam nyam");
+            this.setState({name: ''});
+            this.setState({email: ''});
+            this.setState({feedback: ''});
             alert('Thank you for the feedback 😊');
-            this.state.name = '';
-            this.state.email = '';
-            this.state.feedback = '';
+            window.location.reload();
             event.preventDefault();
         }
     }
@@ -64,7 +70,7 @@ class Feedback extends Component {
                     <TextInput placeholder="someone@example.com" name="userEmail" type="email" value={this.state.userEmail} onChange={this.handleEmailChange}/>
                     <TextInput placeholder="Type your feedback here..." type="email" isBig="true" value={this.state.feedback} onChange={this.handleFeedbackChange}/>
                     <Button title="Submit" type="submit" color="#164396" isHalf="true" />
-                    <Button title="Reset" type="reset" color="#00C89F" isHalf="true"/>
+                    <Button title="Reset" type="reset" color="#00C89F" isHalf="true" onClick={this.handleReset}/>
                 </form>
             </div>
         )

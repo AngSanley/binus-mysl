@@ -58,7 +58,7 @@ class Login extends Component {
                                 <div style={{ height: '100vh' }}/>
                                 <div className="contentTitle">Jaringan Data Terkuat</div>
                                 <div className="contentSubtitle">Nikmati streaming bebas hambatan dengan fiberisasi</div>
-                                <button className="contentButton" target="_blank">Selengkapnya</button>
+                                <button className="contentButton" style={{fontWeight: "bold", background:"#00d2a0", color: "#164396", border: "0"}} target="_blank">Selengkapnya</button>
                          </div>
                         </div>
                     </div>
@@ -70,7 +70,6 @@ class Login extends Component {
                             </svg>
                         </div>
                         <h1>Login</h1>
-
                         <form onSubmit={this.handleSubmit}>
                             <TextInput type="tel" name="phonenumber" placeholder="0878XXXXXXXX" value={this.state.number} onChange={this.handleNumberChange} />
                             <TextInput type="password" name="password" placeholder="password" value={this.state.password} onChange={this.handlePasswordChange} />
@@ -80,7 +79,6 @@ class Login extends Component {
                         </form>
                     </div>
                 </div>
-
             </CookiesProvider>
         )
     }

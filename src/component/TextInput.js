@@ -16,7 +16,7 @@ function TextInput(props) {
 
     if(isBig){
         return (
-            <textarea style={style} rows="5" cols="50" placeholder={props.placeholder}></textarea>
+            <textarea style={style} value={props.value} onChange={props.onChange} rows="5" cols="50" placeholder={props.placeholder}></textarea>
         )
     }
     else {return (
