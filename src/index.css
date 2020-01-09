@@ -1,6 +1,7 @@
 @import url(//db.onlinewebfonts.com/c/e69a032923cd090c8a4887b6110d170f?family=FS+Joey+Heavy);
 @import url(//db.onlinewebfonts.com/c/36e77759708f1237930ad7eaa10593e6?family=MuseoSansW01-300);
 
+
 :root {
     --blue: #164396;
     --green: #00D2A0;
@@ -16,12 +17,18 @@ h2 {
   font-family: 'FS Joey Heavy', Arial, Helvetica, sans-serif;
 }
 
+h3{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -29,4 +36,107 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.bouncy {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: greenyellow;
+}
+
+.textbutton {
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+}
+
+.textbutton:visited {
+  color: black;
+}
+
+
+.flexContainer {
+  display: flex;
+  align-items: center;
+}
+
+.flexContent {
+  color: white;
+  background-color: black;
+}
+
+
+.contentImg {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.contentTitle,.contentSubtitle,.contentButton {
+  margin: 0 50px;
+}
+
+.contentTitle {
+  font-family: 'FS Joey Heavy';
+  font-size: 48px;
+}
+
+.contentSubtitle {
+  margin-bottom: 20px;
+  font-family: 'MuseoSansW01-300';
+}
+
+.contentButton {
+  min-height: 42px;
+  width: 160px;
+  margin-bottom: 120px;
+  text-transform: uppercase;
+}
+
+.flexLogin {
+  margin: 0px 30px;
+  background-color: white;
+  overflow-y: auto;
+}
+
+@media (max-width: 900px) {
+  .flexContainer {
+      margin: 0 30px;
+      flex-direction: column;
+  }
+  
+  .flexContent {
+      display: none;
+  }
+
+  .flexLogin {
+    width: 100%;
+  }
+}
+
+@media (min-width: 901px) {
+  .flexContainer {
+      flex-direction: row;
+      height: 100vh;
+  }
+
+  .flexContent {
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+  }
+
+  .flexLogin {
+      min-height: 100%;
+      width: 500px;
+      align-self: flex-start;
+  }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import './Navbar.css';
 import NavButton from './component/NavButton.js';
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <div className="Navbar">
             <div className="NavbarNavigation" style={{ padding: "30px" }}>
@@ -11,9 +11,9 @@ const Navbar = () => {
                     <path d="M52.0003 26.075C51.9525 25.2359 51.2358 25.0441 51.2358 25.0441L34.8469 18.6429L41.7752 0.829732C41.7752 0.829732 42.0141 0.254341 40.7001 -0.00938042C39.4339 -0.249127 30.2599 1.71679 29.161 3.10732C27.6081 5.04927 24.4784 17.0606 26.8197 27.3457C26.9153 27.7533 27.0108 28.1608 27.1542 28.5684C27.1542 28.5684 26.963 31.805 18.9597 33.1236C18.9597 33.1236 24.4306 33.4832 32.0278 30.4624L32.9596 30.822L35.9459 31.9968L40.939 33.9387C40.939 33.9387 42.0857 34.2264 43.0414 33.5551C43.997 32.8838 51.4747 27.082 51.4986 27.058C51.4986 27.082 52.0242 26.5545 52.0003 26.075Z" fill="#00C89F" />
                 </svg>
                 <div style={{ fontWeight: "bold" }}>MySL</div>
-                <div>082255373762</div>
+                <div>{props.number}</div>
             </div>
-            <NavButton title="Dashboard" route="/"/>
+            <NavButton title="Home" route="/"/>
             <NavButton title="My Package" route="/package"/>
             <NavButton title="Promo" route="/promo"/>
             <NavButton title="Feedback" route="/feedback"/>
